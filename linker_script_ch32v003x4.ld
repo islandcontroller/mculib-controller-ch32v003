@@ -8,6 +8,7 @@
  * @date  20.03.2023
  * @date  23.03.2023  Added simple heap/stack size sanity checks; Added boot-
  *                    loader space
+ * @date  02.10.2023  Added unused glue_7/glue_7t selectors
  ******************************************************************************/
 
 /* Entry Point assignment                                                     */
@@ -50,8 +51,6 @@ SECTIONS
     *(.text.*)
     *(.rodata)
     *(.rodata*)
-    *(.glue_7)
-    *(.glue_7t)
     *(.gnu.linkonce.t.*)
 
     . = ALIGN(4);
