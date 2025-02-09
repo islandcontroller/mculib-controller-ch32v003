@@ -88,8 +88,8 @@ void SystemInit(void)
   RCC->CFGR0 &= ~RCC_PLLSRC;
 
   /* Disable RCC interrupts and clear interrupt flags     */
-  RCC->INTR &= ~(RCC_PLLRDYIE | RCC_HSERDYIE | RCC_HSIRDYIE | RCC_LSERDYIE | RCC_LSIRDYIE);
-  RCC->INTR |= RCC_CSSC | RCC_PLLRDYC | RCC_HSERDYC | RCC_HSIRDYC | RCC_LSERDYC | RCC_LSIRDYC;
+  RCC->INTR &= ~(RCC_PLLRDYIE | RCC_HSERDYIE | RCC_HSIRDYIE | RCC_LSIRDYIE);
+  RCC->INTR |= RCC_CSSC | RCC_PLLRDYC | RCC_HSERDYC | RCC_HSIRDYC | RCC_LSIRDYC;
 
   /* Update System Core clock frequency variable          */
   SystemCoreClock = HSI_VALUE;
