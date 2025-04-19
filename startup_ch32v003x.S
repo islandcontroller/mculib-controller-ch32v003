@@ -7,7 +7,6 @@
  * In order to use this IVT, startup has to  configure mtvec[1:0] = 0b11 !!
  ******************************************************************************/
 .section  .isr_vector,"ax",@progbits
-.balign 1024
 .globl  _vector_base
 _vector_base:
   .option push
